@@ -27,7 +27,7 @@
     NSString* scheme = [command.arguments objectAtIndex:0];
     
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:scheme]]) {
-		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:scheme]];
+		[[UIApplication sharedApplication] open:[NSURL URLWithString:scheme]];
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:(true)];
     }
     else {
